@@ -1,5 +1,7 @@
-//1. Calculadora
 
+/*
+
+//1. Calculadora
 
 //Pedir los datos al usuario
 let numero1 = parseFloat(prompt('Ingrese el primer número: '));
@@ -30,6 +32,9 @@ if (operacion === '+'){
 }}
 console.log(`Resultado: ${resultado}`);
 
+*/
+
+/*
 
 //2. ADIVINA EL NÚMERO
 
@@ -54,21 +59,119 @@ if(!adivinado){
     alert(`Perdiste, el número era: ${numeroSecreto}`)
 }
 
-// Generador de tablas de multiplicar
+*/
+
+/*
+
+//3. Generador de tablas de multiplicar
 
 let numeroT = parseInt(prompt('Ingrese un número para ver su tabla de multiplicar:'));
 let limite = parseInt(prompt('¿Hasta qué número quieres multiplicar?:'));
+let arrayos = []
 
 console.log(`Tabla de multiplicar del ${numeroT}`);
 
 for (let i = 1; i <= limite; i++){
    console.log(`${numeroT} x ${i} = ${numeroT * i}`);
+   arrayos.push(numeroT * i);
 }
-
+console.log(arrayos)
 
 
 //Desafío: Guarda los resultados en un array y muéstralos con un for...of
 
+// 2️⃣ Desafío: mostrar los resultados usando for...of
+console.log("Mostrando los resultados con for...of:");
+let contador = 1; // para saber en qué multiplicación vamos
+
+for (let resultado of arrayos) {
+  console.log(`${numeroT} x ${contador} = ${resultado}`);
+  contador++; // avanzamos al siguiente número
+}
+
+*/
+
+//4. Conversor de Temperaturas
+
+//Función declarativa
+function celsiusAFarenheit(celsius){
+    return (celsius * 9) / 5 + 32;
+}
+const kelvinACelsius = (kelvin) => (kelvin - 273.15);
+
+//Función flecha
+const farenheitACelcius = (farenheit) => ((farenheit - 32) * 5) / 9;
+
+//Programa principal
+let opcion = prompt('Elige una opción:\n1. °C -> °F\n2. °F -> °C\n3. °K -> °C');
+
+if (opcion === '1'){
+    let celsius = parseFloat(prompt('Ingrese la temperatura en °C:'));
+    console.log(`${celsius}°C = ${celsiusAFarenheit(celsius).toFixed(2)}°F`);
+} else if (opcion === '2'){
+    let farenheit = parseInt(prompt('Ingrese la temperatura en °F:'));
+    console.log(`${farenheit}°F = ${farenheitACelcius(farenheit).toFixed(2)}°C`);
+} else if (opcion === '3'){
+    let kelvin = parseInt(prompt('Ingrece la temperatura en °K:'));
+    console.log(`${kelvin}°K = ${kelvinACelsius(kelvin).toFixed(2)}°C`);
+} else {
+    console.log('Opción no válida');
+}
+
+//Agregar una tercera opción que permita convertir Kelvin a Celsius
+
+//5. Lista de compras totales
+
+let listaCompras = [
+    {nombre: 'Leche', precio: 1200, cantidad: 2},
+    {nombre: 'Pan', precio: 800, cantidad: 5},
+    {nombre: 'Huevos', precio: 2500, cantidad: 3},
+    {nombre: 'Café', precio: 3200, cantidad: 1},
+];
+
+// Mostrar lista con forEach
+console.log('Lista de compras:');
+listaCompras.forEach((item) => {
+    console.log(`- ${item.nombre} (x${item.cantidad}) $${item.precio}`);
+});
+
+//Calcular el total usando reduce
+const total = listaCompras.reduce(
+    (acum, item) => acum + item.precio * item.cantidad,
+    0
+);
+console.log(`Total a pagar: $${total}`);
+
+//Filtrar productos caros
+
+const productosCaros = listaCompras.filter((item) => item.precio > 2000);
+console.log('Productos con precio mayor a $2000:', productosCaros);
+
+//Buscar un producto
+const buscar = prompt('Ingrese el nombre del producto que desea buscar:');
+const encontrado = listaCompras.find(
+    (item) => item.nombre.toLocaleLowerCase() === buscar.toLocaleLowerCase()
+);
+if (encontrado){
+    console.log(`Encotrado: ${encontrado.nombre} cuesta $${encontrado.precio}`
+    );
+} else {
+    console.log('Producto no encontrado');
+}
+
+//Agregar un producto
+function agregarProducto(nombre, precio, cantidad){
+let productoNuevo = {nombre: nombre, precio: precio, cantidad: cantidad};
+listaCompras.push(productoNuevo);
+};
+
+//Eliminar un producto
+function eliminarProducto(nombre){
+
+
+};
+
+//Permite al usuario agregar o eliminar productos de la lista dinámicamente usando push() y splice()
 
 
 
@@ -92,9 +195,7 @@ for (let i = 1; i <= limite; i++){
 
 
 
-
-
-
+/*
 
 //AGENDA DE CONTACTOS 
 
@@ -102,7 +203,7 @@ let agenda = JSON.parse(localStorage.getItem('agenda')) || [];
 
 //Guardar cambios en localStorage
 function guardarAgenda(){
-    localStorage.setItem('agenda', JSON.stringify(agenda));
+    //localStorage.setItem('agenda', JSON.stringify(agenda));
 }
 
 
@@ -148,7 +249,7 @@ agregarContacto('Luis', '261-7654321', 'luis@gmail.com');
 mostrarAgenda();
 
 buscarContacto('Ana');
-eliminarContacto('Ana');
+eliminarContacto('Luis');
 buscarContacto('Ana');
 
 
@@ -185,7 +286,7 @@ document.getElementById('reiniciar').addEventListener('click', () => {
     intervalo = null;
 });
 
-
+*/
 
 
 
