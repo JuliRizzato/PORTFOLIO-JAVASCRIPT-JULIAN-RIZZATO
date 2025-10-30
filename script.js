@@ -159,6 +159,8 @@ if (encontrado){
     console.log('Producto no encontrado');
 }
 
+//Permite al usuario agregar o eliminar productos de la lista dinámicamente usando push() y splice()
+
 //Agregar un producto
 function agregarProducto(nombre, precio, cantidad){
 let productoNuevo = {nombre: nombre, precio: precio, cantidad: cantidad};
@@ -170,29 +172,6 @@ function eliminarProducto(nombre){
 
 
 };
-
-//Permite al usuario agregar o eliminar productos de la lista dinámicamente usando push() y splice()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /*
@@ -253,6 +232,28 @@ eliminarContacto('Luis');
 buscarContacto('Ana');
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Cronómetro
 
 
 let segundos = 0;
