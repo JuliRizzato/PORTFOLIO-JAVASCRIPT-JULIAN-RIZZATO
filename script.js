@@ -168,15 +168,27 @@ listaCompras.push(productoNuevo);
 };
 
 //Eliminar un producto
-function eliminarProducto(nombre){
 
+// findIndex() recorre un array y devuelve la posición (índice) del primer elemento que cumple una condición. Si no cumple la condición, devuelve -1
 
-};
+function eliminarProducto(nombre) {
+    const index = listaCompras.findIndex( 
+        (item) => item.nombre.toLowerCase() === nombre.toLowerCase()
+    );
+
+    if (index !== -1) {
+        listaCompras.splice(index, 1); //splice() elimina 1 elemento del array, en la posición index.
+        console.log(`Producto "${nombre}" eliminado correctamente.`);
+    } else {
+        console.log(`No se encontró el producto "${nombre}" en la lista.`);
+    }
+}
+
 
 
 /*
 
-//AGENDA DE CONTACTOS 
+//6. AGENDA DE CONTACTOS 
 
 let agenda = JSON.parse(localStorage.getItem('agenda')) || [];
 
@@ -230,6 +242,16 @@ mostrarAgenda();
 buscarContacto('Ana');
 eliminarContacto('Luis');
 buscarContacto('Ana');
+
+*/
+
+
+//7. Reloj digital dinámico 
+
+// En reloj.html y reloj.js
+
+
+
 
 
 
@@ -287,7 +309,6 @@ document.getElementById('reiniciar').addEventListener('click', () => {
     intervalo = null;
 });
 
-*/
 
 
 
