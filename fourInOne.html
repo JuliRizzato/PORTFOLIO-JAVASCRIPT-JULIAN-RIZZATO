@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo en uno</title>
+    <link rel="stylesheet" href="fourInOne.css">
+</head>
+<body>
+
+    
+<div id="cont">    
+<div id="izq1" class="sect">1
+  <style>
+
+  </style>
+
+
+  <h1 id="ima">📸 Imagen Aleatoria</h1>
+  <img id="imagen" src="" alt="Imagen aleatoria">
+  <br>
+  <button onclick="nuevaImagen()">Nueva Imagen</button>
+
+  <script>
+    function nuevaImagen() {
+      // Picsum API genera una imagen aleatoria de 600x400
+      const url = `https://picsum.photos/600/400?random=${Math.floor(Math.random()*10000)}`;
+      document.getElementById("imagen").src = url;
+    }
+
+    // Cargar la primera imagen al iniciar
+    nuevaImagen();
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+<div id="izq2" class="sect">2</div>
+
+<div id="der1" class="sect">3</div>
+<div id="der2" class="sect">4</div>
+</div>
+
+
+
+
+<script src="fourInOne.js"></script>
+</body>
+</html>
