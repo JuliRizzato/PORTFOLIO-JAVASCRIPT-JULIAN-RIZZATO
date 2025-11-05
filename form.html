@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de registro</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #fafafa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        form{
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px #0002;
+            width: 300px;
+        }
+        input, button{
+            width: 100%;
+            margin: 10px 0;
+            padding: 8px;
+            font-size: 1em;
+        }
+        .error{
+            color: red;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <form id="registroForm">
+        <h2>Registro</h2>
+        <input type="text" id="nombre" placeholder="Nombre completo">
+        <input type="email" id="email" placeholder="Correo electrónico">
+        <input type="password" id="password" placeholder="Contraseña">
+        <button type="submit">Registrarse</button>
+        <p id="mensaje" class="error"></p>
+    </form>
+    
+ <script>
+        const form = document.getElementById('registroForm');
+        const nombre = document.getElementById('nombre');
+        const email = document.getElementById('email');
+        const password = document.getElementById('password');
+        const mensaje = document.getElementById('mensaje');
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault(); // Evita el envío real del formulario
+            mensaje.textContent = ''; // Limpia mensajes anteriores
+            mensaje.className = 'error';
+
+            // Validaciones básicas
+            if (nombre.value.trim() === '' || email.value.trim() === '' || password.value.trim() === '') {
+                mensaje.textContent = '⚠️ Todos los campos son obligatorios.';
+                return;
+            }
+
+            // Validar formato de correo
+            const emailValido = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailValido.test(email.value)) {
+                mensaje.textContent = '⚠️ El correo electrónico no es válido.';
+                return;
+            }
+
+            // Validar longitud de contraseña
+            if (password.value.length < 6) {
+                mensaje.textContent = '⚠️ La contraseña debe tener al menos 6 caracteres.';
+                return;
+            }
+
+            mensaje.textContent = '✅ Registro exitoso.';
+            mensaje.className = 'exito';
+
+            // Limpia los campos
+            form.reset();
+        });
+    </script>
+
+</body>
+</html>

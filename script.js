@@ -248,15 +248,21 @@ buscarContacto('Ana');
 
 //7. Reloj digital dinámico 
 
-// En reloj.html y reloj.js
+// En reloj.html
 
 
 
+//8. Calculadora
 
+// En calculadora.html
 
+//9. To Do List
 
+// En toDo.html
 
+//10. Formulario
 
+// En form.html
 
 
 
