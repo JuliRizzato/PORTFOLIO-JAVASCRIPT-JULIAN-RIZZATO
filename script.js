@@ -1,6 +1,3 @@
-
-/*
-
 //1. Calculadora
 
 //Pedir los datos al usuario
@@ -32,9 +29,7 @@ if (operacion === '+'){
 }}
 console.log(`Resultado: ${resultado}`);
 
-*/
 
-/*
 
 //2. ADIVINA EL NÚMERO
 
@@ -59,9 +54,7 @@ if(!adivinado){
     alert(`Perdiste, el número era: ${numeroSecreto}`)
 }
 
-*/
 
-/*
 
 //3. Generador de tablas de multiplicar
 
@@ -89,7 +82,7 @@ for (let resultado of arrayos) {
   contador++; // avanzamos al siguiente número
 }
 
-*/
+
 
 //4. Conversor de Temperaturas
 
@@ -185,9 +178,6 @@ function eliminarProducto(nombre) {
 }
 
 
-
-/*
-
 //6. AGENDA DE CONTACTOS 
 
 let agenda = JSON.parse(localStorage.getItem('agenda')) || [];
@@ -243,90 +233,24 @@ buscarContacto('Ana');
 eliminarContacto('Luis');
 buscarContacto('Ana');
 
-*/
 
 
 //7. Reloj digital dinámico 
 
+
 // En reloj.html
 
-
-
 //8. Calculadora
+
 
 // En calculadora.html
 
 //9. To Do List
 
+
 // En toDo.html
 
 //10. Formulario
 
+
 // En form.html
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//Cronómetro
-
-
-let segundos = 0;
-let intervalo;
-function actualizarCronometro(){
-    const hrs = String(Math.floor(segundos / 3600)).padStart(2, '0');
-    const mins = String(Math.floor(segundos % 3600 / 60)).padStart(2, '0');
-    const secs = String(segundos % 60).padStart(2, '0');
-
-    document.getElementById('cronometro').textContent = `${hrs}:${mins}:${secs}`;
-}
-
-document.getElementById('iniciar').addEventListener('click', () => {
-  if (!intervalo){
-    intervalo = setInterval(() => {
-        segundos++;
-        actualizarCronometro();
-    }, 1000);
-  }
-});
-
-document.getElementById('pausar').addEventListener('click', () => {
-     clearInterval(intervalo);
-    intervalo = null;
-});
-
-document.getElementById('reiniciar').addEventListener('click', () => {
-    segundos = 0;
-    actualizarCronometro();
-    clearInterval(intervalo);
-    intervalo = null;
-});
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
