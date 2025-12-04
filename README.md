@@ -103,10 +103,17 @@ CSS3
 JavaScript (ES6+)
 
 📂 Estructura del proyecto
+
 /
+
 ├── index.html
+
 ├── calculadora.html
+
 ├── reloj.html
+
 ├── form.html
+
 ├── script.js
+
 └── README.md
