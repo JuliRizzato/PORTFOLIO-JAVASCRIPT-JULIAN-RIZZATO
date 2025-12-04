@@ -17,8 +17,11 @@ Incluye manejo de errores, reinicio automático de pantalla y evaluación de exp
 Formulario con validaciones:
 
 -Campos obligatorios
+
 -Validación de email
+
 -Mínimo de caracteres en la contraseña
+
 -Muestra mensajes de error y de éxito.
 
 3. Reloj digital
@@ -26,9 +29,13 @@ Formulario con validaciones:
 Reloj en tiempo real que cambia de color según la hora del día:
 
 -Mañana
+
 -Tarde
+
 -Atardecer
+
 -Noche
+
 
 4. Calculadora por prompt
 
@@ -47,7 +54,9 @@ Genera una tabla hasta un límite elegido por el usuario y guarda los resultados
 Convierte:
 
 -°C → °F
+
 -°F → °C
+
 -°K → °C
 
 Usa funciones clásicas y funciones flecha.
@@ -57,7 +66,9 @@ Usa funciones clásicas y funciones flecha.
 Trabaja con:
 
 -forEach, reduce, filter, find
+
 -Agregar y eliminar productos dinámicamente
+
 -Mostrar total a pagar
 
 9. Agenda de contactos
@@ -65,7 +76,9 @@ Trabaja con:
 Pequeña agenda con funciones para:
 
 -Agregar contactos
+
 -Buscar
+
 -Mostrar
 
 Eliminar
@@ -76,7 +89,9 @@ Los datos se guardan usando localStorage.
 Un index.html que actúa como menú principal para acceder a:
 
 -Calculadora
+
 -Formulario
+
 -Reloj
 
 🛠️ Tecnologías utilizadas
